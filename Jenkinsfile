@@ -40,6 +40,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                branch 'release'
+            }
             steps {
                 echo 'Deploying to production...'
             }
