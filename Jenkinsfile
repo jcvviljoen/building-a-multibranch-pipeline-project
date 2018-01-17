@@ -39,5 +39,10 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to production...'
+            }
+        }
     }
 }
